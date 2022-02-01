@@ -1,0 +1,57 @@
+body {
+    background-color: black;
+    font-size: 4rem;
+}
+
+.half-screen {
+    background-color: hotpink;
+    height: 50vh;
+}
+
+/* there are many but focus on the first 3 main ones */
+/* ********************************************** */
+/* align-items, justify-content, flex-direction */
+/* ********************************************** */
+.flex-center {
+    /* flex is a display property */
+    /* this will flex all the childeren of this parent element */
+    display: flex;
+    /* center vertically */
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* all of this will center the box, no matter what the size of the page is */
+    /* don't use text-align margin augo 0 or any of those old ways anymore */
+}
+
+.square {
+    background-color: turquoise;
+    width: 100px;
+    height: 100px;
+    margin: 100px; 
+    /* margin caused the initial black space above prior to the application of flex */
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column; 
+    width: 100%;
+    border: lawngreen solid 5px;
+}
+
+/* look good on a small device */
+/* override the CSS rules with media queries */
+/* media query for tablet and media query for phone and just your regular */
+@media (max-width: 1000px) {
+    .flex-row {
+        flex-direction: column;
+    }
+    body {
+        background-color: tomato;
+    }
+}
